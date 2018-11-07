@@ -1,0 +1,9 @@
+1. Given linear searching, it would take 7 iterations to get to G.
+2. It would take 3 iterations to get to G with binary search. 
+3. Continuing from the tables -- 
+
+|n |fib(n-2)|fib(n-1)|fib(n)|
+|10|   21   |   34   |  55  |
+|11|   34   |   55   |  89  |
+|12|   55   |   89   | 144  |
+
