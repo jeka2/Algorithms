@@ -2,10 +2,11 @@ It seems that the higher the iterations that need to be performed, the less prac
 This is simply because the more calls there are, the more redundant calls are made. So if you have fib(20),
 the recursive call needs to calculate fib(19) all the way though fib(1), and each of the lower recursive calls do
 the same. So fib(19) calls fib(18) and fib(17) the subsequent of which call another two recursive calls, amounting
-to a tree with 2 children for each call, making the recursive call impractical in situations with large numbers.
+to a tree with 2 children for each call until the exit condition(s)
+are met, making the recursive call impractical in situations with large numbers.
 
 1. Given an unsorted collection, binary search is less than useless as it has absolutely no structure to stand upon.
 Linear search is a better choice. Iterative solution seems more practical.
 2. Given a sorted collection, binary search is a clear winner, and could potentially reduce the number of iterations
-from a million to a few dozen or less. Again, I think iterative solution seems best as there is no constant pushing
+from a million to a few dozen or less. Again, I think an iterative solution seems best as there is no constant pushing
 of arguments that are arrays of a million values over and over again until the searched value if stumbled upon.
