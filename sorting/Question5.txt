@@ -1,0 +1,7 @@
+Different algorithms perform differently based on different conditions. For example, the way I implemented bucket
+sort is the biggest variable, as I let one pick the number of buckets due to possible pre-known conditions.
+Bucket sort works best with relatively evenly distributed data, and if the data is clustered together, the algorithm
+that takes care of the buckets isn't as useful. Otherwise, the worst case scenario time complexity for heap sort
+is O(nlog(n)) and the worst case scenario for quick sort is O(n^2). They all have either time or space tradeoffs in
+the end and should be implemented in different scenarios. If one knows the relative distribution of the data, one
+is more prompt to pick a more appropriate algorithm.
