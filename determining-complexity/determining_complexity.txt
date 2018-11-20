@@ -4,7 +4,7 @@
 element in i. So to be more exact, the time complexity is i * j. I made the assumption that they are relatively
 similar values.
 4. O(2^n) -- The reccursive implementation of the fibonacci sequence algorithm has a big O of 2^n, and is an exponential
-time algorithm. The upper-bound time complexity of the recursive sequence can be estimated by 2T(n-1) + C,
+time algorithm. The upper-bound time complexity of the recursive sequence can be estimated by 2T(n-1) + C;
 where T(n-1) is approximately T(n-2), hence the 2 up front, plus the constant C which accounts for the minor 
 complexity operations such as comparison and addition. In it's generic form, the function reduces to 
 (2^n)T(0) + (2^n-1)*C or (1+C)(2^n)-C, which follows the general big O notation of 2^n. Overall, it's very inefficient.
