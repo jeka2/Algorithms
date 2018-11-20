@@ -1,0 +1,10 @@
+1. The big O for the first version is n^2 due to the only factor really being influenced by the size of the array
+passed are the two loops taking care of assignments.
+2. The time complexity for a merge sort is O(nlogn) T(n) = 2T(n/2) + n, where T(n/2) are the two individual recursive
+calls and n is the merge call. If one were to keep on rewriting the T(n) values in terms of their recursions,
+the pattern that begins to form is the in form of T(n) = (2^k) * T(n/(2^k)) + kn, where k is the number of itterations.
+Then since we know T(1) = 1, we can calculate that (n/2^k) = 1 and n = 2^k. Solving for k, we get that k = log2(n).
+Substituting every k in terms of n, the most significant value in terms of n is nlon2(n), which is the big O.
+3. The big O for the third version is n^2 for the same reason as number one, however, the space complexity if
+O(1) since no new space needs to be allocated to perform the sort. Unlike 2, where it is O(1), as a new array
+always needs to be allocated and joined with another array.
