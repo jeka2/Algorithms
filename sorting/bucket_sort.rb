@@ -1,7 +1,7 @@
 class BucketSort
 	##Since bucket sort efficiency is entirely dependent on the allocation of
 	##the elements in the buckets(in other words, I'm assuming whoever is using it is
-	##overall aware of the distribution of the data), I'm going to assume a relatively 
+	##overall aware of the distribution of the data), I'm going to assume a relatively
 	##even distribution and sort each individual bucket with selection sort
 	def sort(arr, size)
 		@arr = []
@@ -20,7 +20,7 @@ class BucketSort
 		end
 		0.upto(arr.length - 1) do |i|
 			buckets[((arr[i] - min) / size).floor].push(arr[i])
-		end 
+		end
 		individual_bucket_sort(buckets, arr.length)
 	end
 
@@ -32,9 +32,11 @@ class BucketSort
 	end
 
 	def selection_sort(arr)
+		p arr[0]
+		p arr[1]
 		0.upto(arr.length - 2) do |i|
 			min = i
-			(i + 1).upto(arr.length) do |j|
+			(i + 1).upto(arr.length - 1) do |j|
 				if arr[j] < arr[min]
 					min = j
 				end
@@ -47,4 +49,3 @@ class BucketSort
 	end
 
 end
-

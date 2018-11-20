@@ -1,4 +1,9 @@
 class QuickSort
+	require 'benchmark'
+
+	def array_test
+		Array.new(50) { rand(1...10) }
+ 	end
 	
 	def partition(array, start, finish)
 		pivot = array[finish]
