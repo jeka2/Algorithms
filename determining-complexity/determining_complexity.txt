@@ -9,7 +9,9 @@ where T(n-1) is approximately T(n-2), hence the 2 up front, plus the constant C 
 complexity operations such as comparison and addition. In it's generic form, the function reduces to 
 (2^n)T(0) + (2^n-1)*C or (1+C)(2^n)-C, which follows the general big O notation of 2^n. Overall, it's very inefficient.
 5. O(n) -- The iterative version of the fibonnaci sequence has a time complexity of O(n) with the number of operations
-directly proportional to the size of the input.
+directly proportional to the size of the input because there is only a single loop, so the time complexity
+will be something to the effect of Kn + C in basic form, where K and C are constants. And as n gets bigger, the
+other terms become more and more irrelevant.
 6. O(n^2) -- Quick sort has an n^2 time complexity in the worst case scenario. This happens when the pivot
 values are already sorted, creating comparison that could have been avoided using other sorting algorithms.
  

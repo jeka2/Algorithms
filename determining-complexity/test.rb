@@ -1,53 +1,54 @@
 class Test
+ ## I chose to use merge sort
+ 	def improved_time_complexity(*arrays)
+   		 combined_array = arrays.flatten
+ 	end
 
-	def sort(collection, from=0, to=nil)
-		 if to == nil
-		   # Sort the whole collection, by default
-		   to = collection.count - 1
-		 end
+ 	def sort(array)
+ 		n = array.length
+ 		return if n == 1
+ 		mid = n / 2
+ 		left = Array.new(mid)
+ 		right = Array.new(n - mid)
+ 		0.upto(left.length - 1) do |i|
+ 			left[i] = array[i]
+ 		end
+ 		0.upto(right.length - 1) do |i|
+ 			right[i] = array[i + mid]
+ 		end
+ 		sort(left)
+ 		sort(right)
+ 		merge(array, left, right)
+ 		array
+ 	end
 
-		 if from >= to
-		   # Done sorting
-		   return
-		 end
-
-		 # Take a pivot value, at the far left
-		 pivot = collection[from]
-
-		 # Min and Max pointers
-		 min = from
-		 max = to
-
-		 # Current free slot
-		 free = min
-
-		 while min < max
-		   if free == min # Evaluate collection[max]
-		     if collection[max] <= pivot # Smaller than pivot, must move
-		       collection[free] = collection[max]
-		       min += 1
-		       free = max
-		     else
-		       max -= 1
-		     end
-		   elsif free == max # Evaluate collection[min]
-		     if collection[min] >= pivot # Bigger than pivot, must move
-		       collection[free] = collection[min]
-		       max -= 1
-		       free = min
-		     else
-		       min += 1
-		     end
-		   else
-		     raise "Inconsistent state"
-		   end
-		 end
-
-		 collection[free] = pivot
-
-		 sort collection, from, free - 1
-		 sort collection, free + 1, to
-
-		 collection
+    def merge(array, left, right)
+    	i = 0
+    	j = 0
+    	k = 0
+    	left_elements = left.length
+    	right_elements = right.length
+    	while i < left_elements && j < right_elements
+    		if left[i] <= right[j]
+    			array[k] = left[i]
+    			i += 1
+    		else
+    			array[k] = right[j]
+    			j += 1
+    		end
+    		k += 1
+    	end
+    	while i < left_elements
+    		array[k] = left[i]
+    		i += 1
+    		k += 1
+    	end
+    	while j < right_elements
+    		array[k] = right[j]
+    		j += 1
+    		k += 1
+		end
 	end
+   
 end
+ 
