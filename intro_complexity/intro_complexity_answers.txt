@@ -9,4 +9,10 @@ is still O(log(n)).
 5. The graph is in the folder along with this file.
 6. As n approaches infinity, the limit of the function also approaches infinity.
 7. The big-O notation for the data is O(2^n).
-8. 
+8. Attached
+9. Attached
+10. Worst case scenario of binary search is O(log(n))
+11. The best case scenario of binary search is Omega(1), as the value would be found right away.
+12. The average case scenario is also Theta(log(n)) as the fundemental process is not different than Big Oh, and
+the fact that even the worst case performace of binary search is very close to the worst case is a good thing in
+this case, considering that log(n) complexity is very efficient. 
