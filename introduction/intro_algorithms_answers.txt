@@ -1,28 +1,28 @@
- 1 -1. Calculating a tip - 
- 2 -Set TotalAmount to the bill total
- 3 -IF the service was good THEN
- 4 -	Set TipPercentage to .20
- 5 -ELSE
- 6 -	Set TipPercentage to .15
- 7 -END IF
- 8 -Set Tip to TotalAmount multiplied by TipPercentage
- 9 -
-10 -2. Determining what to wear -
-11 -Set WorkDays to [Mon, Tue, Wed, Thu, Fri]
-12 -Set TodaysDay to the current day of the week
-13 -FOR EACH WorkDays do i
-14 -	IF WorkDays[i] is equal to TodaysDay THEN
-15 -		Set Clothes to WorkClothes
-16 -	ELSE
-17 -		Set Clothes to CasualClothes
-18 -	END IF
-19 -
-20 -END FOR
-21 -
-22 -3.Getting to work - 
-23 -Put on clothes
-24 -Put on shoes
-25 -Close door
-26 -Walk to car
-27 -Start car
-28 -Drive to work
+1. Calculating a tip - 
+Set TotalAmount to the bill total
+IF the service was good THEN
+	Set TipPercentage to .20
+ELSE
+	Set TipPercentage to .15
+END IF
+Set Tip to TotalAmount multiplied by TipPercentage
+
+2. Determining what to wear -
+Set WorkDays to [Mon, Tue, Wed, Thu, Fri]
+Set TodaysDay to the current day of the week
+FOR EACH WorkDays do i
+	IF WorkDays[i] is equal to TodaysDay THEN
+		Set Clothes to WorkClothes
+	ELSE
+		Set Clothes to CasualClothes
+	END IF
+
+END FOR
+
+3.Getting to work - 
+Put on clothes
+Put on shoes
+Close door
+Walk to car
+Start car
+Drive to work
