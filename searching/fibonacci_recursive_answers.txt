@@ -4,6 +4,7 @@ the recursive call needs to calculate fib(19) all the way though fib(1), and eac
 the same. So fib(19) calls fib(18) and fib(17) the subsequent of which call another two recursive calls, amounting
 to a tree with 2 children for each call, making the recursive call impractical in situations with large numbers.
 
+
 1. Given an unsorted collection, binary search is less than useless as it has absolutely no structure to stand upon.
 Linear search is a better choice. Iterative solution seems more practical.
 2. Given a sorted collection, binary search is a clear winner, and could potentially reduce the number of iterations
