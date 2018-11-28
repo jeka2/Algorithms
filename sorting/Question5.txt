@@ -1,3 +1,5 @@
+To measure using benchmark, i required 'benchmark', and executed benchmark.measure { sort(data) } with each class.
+
 Different algorithms perform differently based on different conditions. For example, the way I implemented bucket
 sort is the biggest variable, as I let one pick the number of buckets due to possible pre-known conditions.
 Bucket sort works best with relatively evenly distributed data, and if the data is clustered together, the algorithm
